@@ -1,0 +1,41 @@
+{
+  "kind": "metric",
+  "status": "derived",
+  "case": "e61ab76f068840edcd9f",
+  "entity": "shippingservice-1",
+  "raw_entity": "node-6.shippingservice-1",
+  "source": "metric_container",
+  "files": [
+    "telemetry/2022_03_20/metric/metric_container.csv"
+  ],
+  "signal": "container_fs_reads./dev/vda",
+  "family": "read_io",
+  "semantics": "exported_value",
+  "window": [
+    1647738000000,
+    1647739800000
+  ],
+  "baseline_window": [
+    1647736200000,
+    1647738000000
+  ],
+  "baseline_method": "preceding_30_minutes",
+  "baseline_median": 0.0,
+  "baseline_mad": 0.0,
+  "baseline_samples": 30,
+  "samples": 30,
+  "expected_samples": 30,
+  "incident_median": 0.0,
+  "min": 0.0,
+  "max": 48608.0,
+  "peak_value": 48608.0,
+  "score": 48608.0,
+  "direction": "increase",
+  "anomalous_samples": 4,
+  "onset": [
+    1647738480000,
+    1647738540000
+  ],
+  "method": "rca-v2:median_mad_floor_5pct_zero_mad_floor1_threshold4",
+  "id": "ev_e705d1ef6494aac0c51c"
+}

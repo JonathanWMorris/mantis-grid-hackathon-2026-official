@@ -1,0 +1,41 @@
+{
+  "kind": "metric",
+  "status": "derived",
+  "case": "e61ab76f068840edcd9f",
+  "entity": "node-6",
+  "raw_entity": "node-6",
+  "source": "metric_node",
+  "files": [
+    "telemetry/2022_03_20/metric/metric_node.csv"
+  ],
+  "signal": "system.mem.total",
+  "family": "memory",
+  "semantics": "exported_value",
+  "window": [
+    1647738000000,
+    1647739800000
+  ],
+  "baseline_window": [
+    1647736200000,
+    1647738000000
+  ],
+  "baseline_method": "preceding_30_minutes",
+  "baseline_median": 32117.0,
+  "baseline_mad": 0.0,
+  "baseline_samples": 30,
+  "samples": 30,
+  "expected_samples": 30,
+  "incident_median": 32117.0,
+  "min": 32117.0,
+  "max": 32117.0,
+  "peak_value": 32117.0,
+  "score": 0.0,
+  "direction": "increase",
+  "anomalous_samples": 0,
+  "onset": [
+    1647738000000,
+    1647738000000
+  ],
+  "method": "rca-v2:median_mad_floor_5pct_zero_mad_floor1_threshold4",
+  "id": "ev_06eabad8d7ff85b10639"
+}

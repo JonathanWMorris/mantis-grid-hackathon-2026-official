@@ -1,0 +1,41 @@
+{
+  "kind": "metric",
+  "status": "derived",
+  "case": "e61ab76f068840edcd9f",
+  "entity": "shippingservice-1",
+  "raw_entity": "node-6.shippingservice-1",
+  "source": "metric_container",
+  "files": [
+    "telemetry/2022_03_20/metric/metric_container.csv"
+  ],
+  "signal": "container_memory_failures.container.pgfault",
+  "family": "memory",
+  "semantics": "exported_value",
+  "window": [
+    1647738000000,
+    1647739800000
+  ],
+  "baseline_window": [
+    1647736200000,
+    1647738000000
+  ],
+  "baseline_method": "preceding_30_minutes",
+  "baseline_median": 0.0,
+  "baseline_mad": 0.0,
+  "baseline_samples": 30,
+  "samples": 30,
+  "expected_samples": 30,
+  "incident_median": 0.0,
+  "min": 0.0,
+  "max": 51694.5,
+  "peak_value": 51694.5,
+  "score": 51694.5,
+  "direction": "increase",
+  "anomalous_samples": 7,
+  "onset": [
+    1647738480000,
+    1647738540000
+  ],
+  "method": "rca-v2:median_mad_floor_5pct_zero_mad_floor1_threshold4",
+  "id": "ev_59fd8948f4fc12b4da6c"
+}

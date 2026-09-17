@@ -1,0 +1,226 @@
+{
+  "description": "Selected tool starts and model errors from the original trace, with exact payloads. Elapsed times are relative to workflow start; omitted events include provider chunks and framework messages.",
+  "events": [
+    {
+      "event_id": "51f48822fc054f388966ced303da3c33",
+      "elapsed_seconds": 22.75,
+      "kind": "tool_start",
+      "tool": "get_evidence",
+      "payload": {
+        "evidence_id": "ev_59fd8948f4fc12b4da6c"
+      }
+    },
+    {
+      "event_id": "76b9101b3f564a8fa3d8c44cd85741a1",
+      "elapsed_seconds": 22.79,
+      "kind": "tool_start",
+      "tool": "get_evidence",
+      "payload": {
+        "evidence_id": "ev_e705d1ef6494aac0c51c"
+      }
+    },
+    {
+      "event_id": "1348d3eb965a432390ebdb2f76052292",
+      "elapsed_seconds": 25.39,
+      "kind": "tool_start",
+      "tool": "run_prolog",
+      "payload": {
+        "query": "observation(E,'shippingservice-1',memory,D,S,Start,End,KO), E == 'ev_59fd8948f4fc12b4da6c', Start >= 1647738510000, End =< 1647739800000.",
+        "rules": []
+      }
+    },
+    {
+      "event_id": "8f0069f7fda44bd5adbb3f86c819f780",
+      "elapsed_seconds": 31.42,
+      "kind": "tool_start",
+      "tool": "run_prolog",
+      "payload": {
+        "query": "observation('ev_59fd8948f4fc12b4da6c','shippingservice-1',memory,D,S,Start,End,KO).",
+        "rules": []
+      }
+    },
+    {
+      "event_id": "8439a3fb13e146b4a409977a6a353a59",
+      "elapsed_seconds": 31.53,
+      "kind": "tool_start",
+      "tool": "run_prolog",
+      "payload": {
+        "query": "observation('ev_e705d1ef6494aac0c51c','shippingservice-1',read_io,D,S,Start,End,KO).",
+        "rules": []
+      }
+    },
+    {
+      "event_id": "b23eb86c8b1342e4850738f649bd7eab",
+      "elapsed_seconds": 37.55,
+      "kind": "tool_start",
+      "tool": "run_prolog",
+      "payload": {
+        "query": "candidate('shippingservice-1',memory,'ev_59fd8948f4fc12b4da6c'), observation('ev_59fd8948f4fc12b4da6c','shippingservice-1',memory,D,S,Start,End,KO), Width is End-Start, Width =< 60000.",
+        "rules": []
+      }
+    },
+    {
+      "event_id": "b2f89796d34d4bd6982730941cbf3c11",
+      "elapsed_seconds": 67.56,
+      "kind": "tool_start",
+      "tool": "inspect_kb",
+      "payload": {
+        "predicate": "",
+        "component": "shippingservice-1",
+        "offset": 0,
+        "limit": 250
+      }
+    },
+    {
+      "event_id": "da3ee065f1cd45f4928719404de5ae59",
+      "elapsed_seconds": 67.62,
+      "kind": "tool_start",
+      "tool": "get_topology",
+      "payload": {
+        "component": "shippingservice-1"
+      }
+    },
+    {
+      "event_id": "dea9d49eb0904e66971fbb7d8bd43913",
+      "elapsed_seconds": 75.36,
+      "kind": "tool_start",
+      "tool": "inspect_kb",
+      "payload": {
+        "predicate": "",
+        "component": "node-6",
+        "offset": 0,
+        "limit": 250
+      }
+    },
+    {
+      "event_id": "a8863c1f9878443db8a091edfd67da02",
+      "elapsed_seconds": 80.27,
+      "kind": "tool_start",
+      "tool": "run_prolog",
+      "payload": {
+        "query": "pod_local_support('shippingservice-1',memory,[Pos,Neg]), observation(Pos,'shippingservice-1',memory,D,S,Start,End,Signal), Pos == 'ev_59fd8948f4fc12b4da6c', Width is End-Start, Width =< 60000.",
+        "rules": []
+      }
+    },
+    {
+      "event_id": "73b568256a1c4d8eb3236d3cfa295ec7",
+      "elapsed_seconds": 105.41,
+      "kind": "model_error",
+      "tool": null,
+      "payload": {
+        "type": "TimeoutError",
+        "message": "",
+        "cause": "CancelledError()"
+      }
+    },
+    {
+      "event_id": "2c07350909914ab38f0fbdd476e8aa6b",
+      "elapsed_seconds": 126.95,
+      "kind": "tool_start",
+      "tool": "record_diagnosis",
+      "payload": {
+        "answers": [
+          {
+            "component": "shippingservice-1",
+            "reason": "container memory load",
+            "onset": 1647738480000,
+            "evidence_ids": [
+              "ev_59fd8948f4fc12b4da6c"
+            ],
+            "confidence": "high"
+          }
+        ],
+        "limitations": [
+          "The read_io evidence ev_e705d1ef6494aac0c51c is co-occurring but belongs to the read_io family, not memory; it may be a secondary effect of memory pressure but is not used as direct memory evidence.",
+          "The onset window [1647738480000, 1647738540000] starts 30 seconds before the user-requested window [1647738510000, 1647739800000]; the evidence overlaps but is not fully contained within the requested window.",
+          "pod_local_support confirms pod-local memory anomaly with normal host memory, but does not prove causation of the injected mechanism."
+        ]
+      }
+    },
+    {
+      "event_id": "dfd66e914024435390b112ecc80d1456",
+      "elapsed_seconds": 152.0,
+      "kind": "model_error",
+      "tool": null,
+      "payload": {
+        "type": "TimeoutError",
+        "message": "",
+        "cause": "CancelledError()"
+      }
+    },
+    {
+      "event_id": "d5c1e779b385460c96afffbf8ed29a7e",
+      "elapsed_seconds": 184.23,
+      "kind": "tool_start",
+      "tool": "inspect_kb",
+      "payload": {
+        "predicate": "observation",
+        "component": "shippingservice-1",
+        "offset": 0,
+        "limit": 250
+      }
+    },
+    {
+      "event_id": "443fefee2d104dfa8adb0f6e71895d73",
+      "elapsed_seconds": 184.29,
+      "kind": "tool_start",
+      "tool": "inspect_kb",
+      "payload": {
+        "predicate": "normal",
+        "component": "node-6",
+        "offset": 0,
+        "limit": 250
+      }
+    },
+    {
+      "event_id": "82dda1912a584ae0ade328ee49956434",
+      "elapsed_seconds": 190.06,
+      "kind": "tool_start",
+      "tool": "run_prolog",
+      "payload": {
+        "query": "pod_local_support('shippingservice-1',memory,[E,HostE]), E = 'ev_59fd8948f4fc12b4da6c', observation(E,'shippingservice-1',memory,increase,Score,OnsetStart,OnsetEnd,'container_memory_failures.container.pgfault'), Width is OnsetEnd - OnsetStart, Width =< 60000.",
+        "rules": []
+      }
+    },
+    {
+      "event_id": "6fd09258919a4e9784655fd46dd62276",
+      "elapsed_seconds": 205.44,
+      "kind": "tool_start",
+      "tool": "finish_investigation",
+      "payload": {
+        "answers": [
+          {
+            "component": "shippingservice-1",
+            "reason": "container memory load",
+            "onset": 1647738480000,
+            "evidence_ids": [
+              "ev_59fd8948f4fc12b4da6c"
+            ],
+            "confidence": "high",
+            "prolog_support": [
+              {
+                "execution_id": "957b1b7bb7e34e3ba232acf60649c5e5",
+                "binding_indices": [
+                  0
+                ],
+                "explanation": "Binding 0 shows pod_local_support('shippingservice-1', memory, [ev_59fd8948f4fc12b4da6c, ev_06eabad8d7ff85b10639]) with observation ev_59fd8948f4fc12b4da6c being a memory-family candidate (score 51694.5, direction increase, signal container_memory_failures.container.pgfault) and ev_06eabad8d7ff85b10639 being a normal node-6 memory metric (system.mem.total). This confirms a pod-local memory anomaly on shippingservice-1 while the host node-6 shows no memory pressure, supporting the container memory load diagnosis. The onset window is [1647738480000, 1647738540000] (60 seconds wide), indicating a precisely timed memory pressure event.",
+                "assumptions": [
+                  "The pod_local_support pattern confirms the anomaly is local to the container rather than a host-level memory issue, but does not prove the injected mechanism.",
+                  "The onset start 1647738480000 is used as the diagnosis onset; the actual injection time may fall anywhere within the [1647738480000, 1647738540000] measurement window.",
+                  "The container_memory_failures.container.pgfault signal increasing to a score of 51694.5 indicates significant page fault activity consistent with memory pressure, but page faults could also be triggered by other mechanisms.",
+                  "Co-occurring anomalies in other families (read_io, cpu, write_io) at the same onset window are not independently diagnosed here; they may be secondary effects of the memory load."
+                ]
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "The onset window [1647738480000, 1647738540000] starts 30 seconds before the originally requested window [1647738510000, 1647739800000]; the evidence overlaps but is not fully contained within the requested window.",
+          "Co-occurring anomalies in read_io (ev_e705d1ef6494aac0c51c, score 48608.0), cpu (ev_ed3dc91f6e7e67151073, ev_49478c4cdb34a28a9828), and write_io (ev_442f189608677aac11e6) families share the same onset window and may be secondary effects or independent issues not diagnosed here.",
+          "The diagnosis is based on measured telemetry patterns (candidate + pod_local_support); it supports but does not prove the specific injected fault mechanism.",
+          "No trace or log evidence was inspected for shippingservice-1; additional corroboration from application-level signals is unavailable."
+        ]
+      }
+    }
+  ]
+}
