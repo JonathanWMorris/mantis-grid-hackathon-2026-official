@@ -1,0 +1,44 @@
+{
+  "fixed": {
+    "complete_repeats": 1,
+    "metrics": {
+      "strict": {
+        "mean": 0.5,
+        "sample_sd": null
+      },
+      "partial": {
+        "mean": 0.5,
+        "sample_sd": null
+      },
+      "dollars_per_case": {
+        "mean": 0.2041713,
+        "sample_sd": null
+      },
+      "seconds_per_case": {
+        "mean": 83.85735712499991,
+        "sample_sd": null
+      }
+    }
+  },
+  "routed": {
+    "complete_repeats": 1,
+    "metrics": {
+      "strict": {
+        "mean": 0.5,
+        "sample_sd": null
+      },
+      "partial": {
+        "mean": 0.75,
+        "sample_sd": null
+      },
+      "dollars_per_case": {
+        "mean": 0.285998095,
+        "sample_sd": null
+      },
+      "seconds_per_case": {
+        "mean": 146.99058862499987,
+        "sample_sd": null
+      }
+    }
+  }
+}

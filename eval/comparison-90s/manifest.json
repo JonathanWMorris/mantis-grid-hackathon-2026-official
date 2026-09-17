@@ -1,0 +1,56 @@
+{
+  "source": {
+    "files": {
+      "Dockerfile": "9eecab59658d04ba5f5244bdb3ea646d9048e98bfc248765e66d3b6307a04b16",
+      "agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "agents/heuristic.py": "aa4f6476fb67d2a438744fc46a88a48308d78a350e4448851cb079b6eb2b62e9",
+      "agents/magentic.py": "c260ae35f61615f2c153dbf21746576d468cbd6aa99754e5a51b49587268e621",
+      "agents/routed.py": "a64463864c2223a2fb735f4940d8b2fde1c56d055fab19af04ef4b59aef4594e",
+      "cost.py": "5d368606963189099fb78db7df905147b7df314b6f727de6b9de1f6d8130b4f6",
+      "evaluate_pipeline.py": "66abf3d3689246228ae69ced954f3cb76babad5684f8f3e0e9f7d4c865054c28",
+      "llm.py": "48619c3e76cf9e7e1decb779b6b55f9de06106f4fd3df92971039e425b83d754",
+      "prolog/base.pl": "d7aa5f03f449e18124eaa106d47b4cbd14282fdb2df0f79e744193329744390c",
+      "prolog/trusted.pl": "bd13dd80e174e01279fe65a1d90d8e52a85869a4cbe8e6a664d1763bb7aead7e",
+      "prompts/investigator.md": "2ce476339425fd7501ce2179da600b662d7fb7966d2b31d830fdbccf6e9b4310",
+      "prompts/prolog_examples.json": "5e98bfd941bb274828a221d1b1b88792b5e7452bcdd7bafd709601fc9419f090",
+      "rca/__init__.py": "160e3d68a91251141d2e58c94cc472a0823208ec458fecf95a63296a70b5a57e",
+      "rca/diagnosis.py": "6e9553f50282e586150d2ea719db57acd94e7321cab45152c0135f9d6231d5ab",
+      "rca/manager.py": "b01bd3c9287ce18b08ba75581d12dcabf32f81005ed28194ba5111bd08f314c2",
+      "rca/model.py": "55fa52a9eb74df8c4f5e7d07dc3973148b7d2cad686d4f4b90f6de0e396863c1",
+      "rca/schema.py": "c63ac80b7991bd01c95ef09117a6ba9715404566b242058ead1db738eff6e2a1",
+      "rca/store.py": "512d457604991357d8fee2cf99ff339219860b207094ece690a86ecd53fdb421",
+      "rca/symbolic.py": "c842cb753ea9749f926303aafc167e5751e9a9429754610f375e0bffd6d37500",
+      "rca/tools.py": "a201b610ce39fe1534014a196fcf391797f4bab2176c39b81b7697b5d857b72d",
+      "rca/trace.py": "1920041cf3fbe982746c5f385b110315833b3206660d5e0359a8812d7afb2c18",
+      "read_trace.py": "a0734e311b0d438b9672c7b982ee53ce517d4e63d8a752166fa6b1d055c1c907",
+      "requirements-dev.txt": "77fd9c3f4d8ec769028714a800e2f4835d9ccbe7fc50da2287e72043b9cb0673",
+      "requirements.txt": "0e909967b4800d2572a73c5a45006ac8f8ad9ca79a78d5f3ec57345a6acf7e12",
+      "run.py": "c3a663e193c3a317d443f1f7b5bde4eac1a525ac0a262edb7c392f3606e9c8b0",
+      "score.py": "b62dbe060b200a155d66c5beca7da7a981b006f03bb594e3b1e2bde71ca91c0a",
+      "validate_evidence.py": "f8807c1dba73efdee0dd69f111c6ab3cf42fb57624dbecc91296cafbce74b329"
+    },
+    "sha256": "a2e69d6ecabca792268f7580c2bf6bf7ae0e2a6e8b0cf627cdd587964f5efd51"
+  },
+  "dataset": "/Users/jonathanmorris/Developer/hackathon-2026-official/track-1/data/Market-cloudbed-1",
+  "row_ids": [
+    0,
+    1
+  ],
+  "split": "development",
+  "case_seconds": 90.0,
+  "configs": [
+    "routed",
+    "fixed"
+  ],
+  "repeats": 2,
+  "budget_file": "/Users/jonathanmorris/Developer/hackathon-2026-official/track-1/out/development_spend.json",
+  "cumulative_budget_dollars": 10,
+  "fixed_model": "zai-org/GLM-5.2",
+  "cache": "separate cold cache per configuration/repeat",
+  "query_fields": [
+    "row_id",
+    "task_index",
+    "instruction"
+  ],
+  "development_queries_sha256": "9c4a0085b115fc9ad396125ee50918ca3f0ba7ed96eb6e52bdc9851e64b5167b"
+}

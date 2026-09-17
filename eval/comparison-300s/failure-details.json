@@ -1,0 +1,86 @@
+[
+  {
+    "configuration": "fixed-0",
+    "case": "0",
+    "kind": "model_error",
+    "category": "deadline",
+    "request_seconds": 25.0,
+    "detail": {
+      "type": "TimeoutError",
+      "message": "",
+      "cause": "CancelledError()"
+    }
+  },
+  {
+    "configuration": "fixed-0",
+    "case": "0",
+    "kind": "model_error",
+    "category": "deadline",
+    "request_seconds": 25.01,
+    "detail": {
+      "type": "TimeoutError",
+      "message": "",
+      "cause": "CancelledError()"
+    }
+  },
+  {
+    "configuration": "fixed-0",
+    "case": "0",
+    "kind": "model_error",
+    "category": "deadline",
+    "request_seconds": 25.01,
+    "detail": {
+      "type": "TimeoutError",
+      "message": "",
+      "cause": "CancelledError()"
+    }
+  },
+  {
+    "configuration": "fixed-0",
+    "case": "0",
+    "kind": "investigation_error",
+    "category": null,
+    "request_seconds": null,
+    "detail": {
+      "type": "ChatClientException",
+      "message": "('<class \\'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient\\'> service failed to complete the prompt: Configured models exhausted provider/transport retries: {\"zai-org/GLM-5.2\": 3}', RuntimeError('Configured models exhausted provider/transport retries: {\"zai-org/GLM-5.2\": 3}'))",
+      "cause": "RuntimeError('Configured models exhausted provider/transport retries: {\"zai-org/GLM-5.2\": 3}')"
+    }
+  },
+  {
+    "configuration": "fixed-0",
+    "case": "1",
+    "kind": "investigation_error",
+    "category": null,
+    "request_seconds": null,
+    "detail": {
+      "type": "ChatClientException",
+      "message": "('<class \\'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient\\'> service failed to complete the prompt: Configured models exhausted provider/transport retries: {\"zai-org/GLM-5.2\": 3}', RuntimeError('Configured models exhausted provider/transport retries: {\"zai-org/GLM-5.2\": 3}'))",
+      "cause": "RuntimeError('Configured models exhausted provider/transport retries: {\"zai-org/GLM-5.2\": 3}')"
+    }
+  },
+  {
+    "configuration": "routed-0",
+    "case": "0",
+    "kind": "model_error",
+    "category": "deadline",
+    "request_seconds": 25.01,
+    "detail": {
+      "type": "TimeoutError",
+      "message": "",
+      "cause": "CancelledError()"
+    }
+  },
+  {
+    "configuration": "routed-0",
+    "case": "0",
+    "kind": "model_error",
+    "category": "deadline",
+    "request_seconds": 25.01,
+    "detail": {
+      "type": "TimeoutError",
+      "message": "",
+      "cause": "CancelledError()"
+    }
+  }
+]

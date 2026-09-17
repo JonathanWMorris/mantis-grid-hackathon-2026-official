@@ -1,0 +1,29 @@
+{
+  "status": "ready_for_user_launched_comparison",
+  "automated_tests_passed": 46,
+  "official_validator": "passed, zero warnings",
+  "linux": {
+    "cases": 2,
+    "evidence_files": 2,
+    "prolog": [
+      {
+        "N": "41",
+        "Twice": "82"
+      }
+    ],
+    "image_exclusions": "passed",
+    "read_only": true,
+    "network": "none"
+  },
+  "offline_harness": {
+    "status": "complete",
+    "expected_runs": 1,
+    "recorded_runs": 1
+  },
+  "comparison_started": false,
+  "runtime_hash": "a2e69d6ecabca792268f7580c2bf6bf7ae0e2a6e8b0cf627cdd587964f5efd51",
+  "package_runtime_matches": true,
+  "secrets_scan": "passed",
+  "recorded_development_spend": 1.6467994149999994,
+  "published": false
+}

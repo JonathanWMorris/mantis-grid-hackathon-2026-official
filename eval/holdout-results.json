@@ -1,0 +1,76 @@
+[
+  {
+    "configuration": "routed",
+    "repeat": 0,
+    "split": "holdout",
+    "returncode": 0,
+    "cases": 4,
+    "expected_cases": 4,
+    "wall_seconds": 168.973,
+    "dollars": 0.161911015,
+    "model_calls": 25,
+    "prolog_queries": 0,
+    "prolog_successes": 0,
+    "strict": 0.0,
+    "partial": 0.0,
+    "details": [
+      {
+        "row_id": 2,
+        "task": "task_1",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 45.01,
+        "reason_labels": []
+      },
+      {
+        "row_id": 3,
+        "task": "task_6",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 43.23,
+        "reason_labels": [
+          "node memory consumption"
+        ]
+      },
+      {
+        "row_id": 13,
+        "task": "task_5",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 35.41,
+        "reason_labels": []
+      },
+      {
+        "row_id": 20,
+        "task": "task_6",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 45.02,
+        "reason_labels": [
+          "container CPU load"
+        ]
+      }
+    ],
+    "implementation_hash": "bae84fa778b7dd3ca21e715e6bafc7220b7bf2bec1230f257d7bd14e743d9ea7",
+    "case_seconds_ceiling": 45.0,
+    "resources": {
+      "cases": 4,
+      "wall_seconds": 168.70739954099918,
+      "peak_process_rss_bytes": 1088749568
+    },
+    "by_task": {
+      "task_1": {
+        "cases": 1,
+        "strict": 0.0
+      },
+      "task_5": {
+        "cases": 1,
+        "strict": 0.0
+      },
+      "task_6": {
+        "cases": 2,
+        "strict": 0.0
+      }
+    }
+  }
+]

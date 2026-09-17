@@ -1,0 +1,91 @@
+{
+  "bindings": [
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_06eabad8d7ff85b10639",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_226cfe98895c92cffccb",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_2e9aabfb38a13c9b4883",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_675d46eaec3a24e901ec",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_885fd561fdce30aef2a9",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_89a101ef9c4cf6c53bf7",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_92d36d1cf53a591de02e",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_d1bcab5d5eaa7f920aa3",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_dba65fb1a5ed92d83506",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    },
+    {
+      "E": "ev_59fd8948f4fc12b4da6c",
+      "HostE": "ev_e8de5589673894f77fc5",
+      "OnsetEnd": "1647738540000",
+      "OnsetStart": "1647738480000",
+      "Score": "51694.5",
+      "Width": "60000"
+    }
+  ],
+  "status": "ok",
+  "returncode": 0,
+  "truncated": false,
+  "execution_id": "957b1b7bb7e34e3ba232acf60649c5e5",
+  "kb_version": "00f5dbc58874f13dfb09",
+  "proposed_assumptions": [],
+  "meaning": "Logical result conditional on supplied observations and rules, not causal proof."
+}

@@ -1,0 +1,1 @@
+{"query": "pod_local_support('shippingservice-1',memory,[E,HostE]), E = 'ev_59fd8948f4fc12b4da6c', observation(E,'shippingservice-1',memory,increase,Score,OnsetStart,OnsetEnd,'container_memory_failures.container.pgfault'), Width is OnsetEnd - OnsetStart, Width =< 60000.", "rules": [], "kb_version": "00f5dbc58874f13dfb09"}

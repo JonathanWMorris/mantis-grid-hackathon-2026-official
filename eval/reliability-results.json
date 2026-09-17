@@ -1,0 +1,168 @@
+{
+  "status": "Stopped after the two planned development cases; no broader evaluation or further live tuning",
+  "tests_passed": 39,
+  "debug_case_seconds": 180,
+  "development_spend_before": 1.1646792649999997,
+  "recorded_development_spend_after": 1.6467994149999994,
+  "linux_check": {
+    "read_only": true,
+    "network": "none",
+    "cpus": 2,
+    "memory_gb": 8,
+    "aggregate_memory_candidates": 41,
+    "arithmetic_double": 82,
+    "kb_version_matches": true
+  },
+  "cases": [
+    {
+      "row_id": "0",
+      "seconds": 180.02,
+      "investigation_status": "incomplete",
+      "strict": 0,
+      "partial": 0.5,
+      "prolog_executions": 8,
+      "prolog_successes": 8,
+      "provisional_saved": true,
+      "completed_submission": false,
+      "executed_tools": [
+        {
+          "tool": "get_evidence",
+          "status": "derived"
+        },
+        {
+          "tool": "get_evidence",
+          "status": "derived"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "get_evidence",
+          "status": "derived"
+        },
+        {
+          "tool": "get_evidence",
+          "status": "derived"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "record_diagnosis",
+          "status": "ok"
+        },
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        }
+      ],
+      "framework_argument_errors": [
+        "Error: Argument parsing failed. Exception: 1 validation error for run_prolog_input\nrules\n  Input should be a valid list [type=list_type, input_value=\"[//'memory support test'...re,_,_,_), Score >= 4.]\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/list_type",
+        "Error: Argument parsing failed. Exception: 1 validation error for run_prolog_input\nrules\n  Input should be a valid list [type=list_type, input_value='[]', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/list_type",
+        "Error: Argument parsing failed. Exception: 8 validation errors for finish_investigation_input\nanswers.0.prolog_support.1.binding_indices\n  List should have at least 1 item after validation, not 0 [type=too_short, input_value=[], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/too_short\nanswers.1.component\n  Field required [type=missing, input_value={'limitations': ['read_io...ed for this diagnosis']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nanswers.1.reason\n  Field required [type=missing, input_value={'limitations': ['read_io...ed for this diagnosis']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nanswers.1.onset\n  Field required [type=missing, input_value={'limitations': ['read_io...ed for this diagnosis']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nanswers.1.evidence_ids\n  Field required [type=missing, input_value={'limitations': ['read_io...ed for this diagnosis']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nanswers.1.confidence\n  Field required [type=missing, input_value={'limitations': ['read_io...ed for this diagnosis']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nanswers.1.prolog_support\n  Field required [type=missing, input_value={'limitations': ['read_io...ed for this diagnosis']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nlimitations\n  Field required [type=missing, input_value={'answers': [{'component'... for this diagnosis']}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+      ],
+      "errors": [
+        {
+          "type": "TimeoutError",
+          "message": "",
+          "cause": "CancelledError()"
+        },
+        {
+          "type": "TimeoutError",
+          "message": "",
+          "cause": "CancelledError()"
+        },
+        {
+          "type": "TimeoutError",
+          "message": "",
+          "cause": "CancelledError()"
+        }
+      ],
+      "notes": [
+        "Investigation stopped: TimeoutError. Used the best validated results available.",
+        "Returned the latest evidence-linked provisional diagnosis saved before investigation ended.",
+        "Investigation incomplete: no accepted investigator diagnosis with current-KB Prolog support."
+      ]
+    },
+    {
+      "row_id": "1",
+      "seconds": 44.61,
+      "investigation_status": "incomplete",
+      "strict": 1,
+      "partial": 1.0,
+      "prolog_executions": 1,
+      "prolog_successes": 1,
+      "provisional_saved": false,
+      "completed_submission": false,
+      "executed_tools": [
+        {
+          "tool": "run_prolog",
+          "status": "ok"
+        },
+        {
+          "tool": "inspect_kb",
+          "status": "ok"
+        },
+        {
+          "tool": "find_changes",
+          "status": "ok"
+        },
+        {
+          "tool": "find_changes",
+          "status": "ok"
+        },
+        {
+          "tool": "describe_data",
+          "status": "ok"
+        }
+      ],
+      "framework_argument_errors": [],
+      "errors": [
+        {
+          "type": "ValueError",
+          "message": "Unknown tagged tool name",
+          "cause": "None"
+        },
+        {
+          "type": "ValueError",
+          "message": "Unknown tagged tool name",
+          "cause": "None"
+        },
+        {
+          "type": "ChatClientException",
+          "message": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: All configured models unavailable\", RuntimeError('All configured models unavailable'))",
+          "cause": "RuntimeError('All configured models unavailable')"
+        }
+      ],
+      "notes": [
+        "Investigation stopped: ChatClientException. Used the best validated results available.",
+        "Investigation incomplete: no accepted investigator diagnosis with current-KB Prolog support.",
+        "Failure 1: numerical fallback used because a valid evidence-linked model answer was unavailable."
+      ]
+    }
+  ],
+  "additional_recorded_spend": 0.48212014999999964,
+  "next_blocker": "GLM-5.1 invented inspect_evidence twice while tool_choice=none. The adapter rejected it and counted response-processing failures toward model unavailability. No completion submission was made in either case."
+}

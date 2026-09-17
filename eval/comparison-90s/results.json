@@ -1,0 +1,256 @@
+[
+  {
+    "status": "complete",
+    "dollars_per_case": 0.072935485,
+    "seconds_per_case": 89.30797187500048,
+    "completed_investigations": 0,
+    "provisional_cases": 0,
+    "fallback_cases": 2,
+    "failure_categories": {
+      "Investigation stopped: ChatClientException. Used the best validated results available.": 1,
+      "Investigation incomplete: no accepted investigator diagnosis with current-KB Prolog support.": 2,
+      "Failure 1: numerical fallback used because a valid evidence-linked model answer was unavailable.": 2,
+      "Investigation stopped: TimeoutError. Used the best validated results available.": 1
+    },
+    "configuration": "routed",
+    "repeat": 0,
+    "split": "development",
+    "returncode": 0,
+    "cases": 2,
+    "expected_cases": 2,
+    "wall_seconds": 178.616,
+    "dollars": 0.14587097,
+    "model_calls": 17,
+    "prolog_queries": 0,
+    "prolog_successes": 0,
+    "strict": 0.5,
+    "partial": 0.5,
+    "details": [
+      {
+        "row_id": 0,
+        "task": "task_6",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 88.22,
+        "reason_labels": [
+          "container read I/O load"
+        ]
+      },
+      {
+        "row_id": 1,
+        "task": "task_1",
+        "partial": 1.0,
+        "strict": 1,
+        "seconds": 90.01,
+        "reason_labels": []
+      }
+    ],
+    "implementation_hash": "a2e69d6ecabca792268f7580c2bf6bf7ae0e2a6e8b0cf627cdd587964f5efd51",
+    "case_seconds_ceiling": 90.0,
+    "resources": {
+      "cases": 2,
+      "wall_seconds": 178.35300304099837,
+      "peak_process_rss_bytes": 547422208
+    },
+    "by_task": {
+      "task_1": {
+        "cases": 1,
+        "strict": 1.0
+      },
+      "task_6": {
+        "cases": 1,
+        "strict": 0.0
+      }
+    }
+  },
+  {
+    "status": "complete",
+    "dollars_per_case": 0.09960683249999999,
+    "seconds_per_case": 90.20485987499978,
+    "completed_investigations": 0,
+    "provisional_cases": 0,
+    "fallback_cases": 2,
+    "failure_categories": {
+      "Investigation stopped: TimeoutError. Used the best validated results available.": 2,
+      "Investigation incomplete: no accepted investigator diagnosis with current-KB Prolog support.": 2,
+      "Failure 1: numerical fallback used because a valid evidence-linked model answer was unavailable.": 2
+    },
+    "configuration": "routed",
+    "repeat": 1,
+    "split": "development",
+    "returncode": 0,
+    "cases": 2,
+    "expected_cases": 2,
+    "wall_seconds": 180.41,
+    "dollars": 0.19921366499999998,
+    "model_calls": 19,
+    "prolog_queries": 0,
+    "prolog_successes": 0,
+    "strict": 0.5,
+    "partial": 0.5,
+    "details": [
+      {
+        "row_id": 0,
+        "task": "task_6",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 90.03,
+        "reason_labels": [
+          "container read I/O load"
+        ]
+      },
+      {
+        "row_id": 1,
+        "task": "task_1",
+        "partial": 1.0,
+        "strict": 1,
+        "seconds": 90.01,
+        "reason_labels": []
+      }
+    ],
+    "implementation_hash": "a2e69d6ecabca792268f7580c2bf6bf7ae0e2a6e8b0cf627cdd587964f5efd51",
+    "case_seconds_ceiling": 90.0,
+    "resources": {
+      "cases": 2,
+      "wall_seconds": 180.1164667920002,
+      "peak_process_rss_bytes": 491061248
+    },
+    "by_task": {
+      "task_1": {
+        "cases": 1,
+        "strict": 1.0
+      },
+      "task_6": {
+        "cases": 1,
+        "strict": 0.0
+      }
+    }
+  },
+  {
+    "status": "complete",
+    "dollars_per_case": 0.2843863,
+    "seconds_per_case": 90.17631414599964,
+    "completed_investigations": 0,
+    "provisional_cases": 1,
+    "fallback_cases": 1,
+    "failure_categories": {
+      "Investigation stopped: TimeoutError. Used the best validated results available.": 2,
+      "Investigation incomplete: no accepted investigator diagnosis with current-KB Prolog support.": 2,
+      "Failure 1: numerical fallback used because a valid evidence-linked model answer was unavailable.": 1
+    },
+    "configuration": "fixed",
+    "repeat": 0,
+    "split": "development",
+    "returncode": 0,
+    "cases": 2,
+    "expected_cases": 2,
+    "wall_seconds": 180.353,
+    "dollars": 0.5687726,
+    "model_calls": 19,
+    "prolog_queries": 0,
+    "prolog_successes": 0,
+    "strict": 0.5,
+    "partial": 0.5,
+    "details": [
+      {
+        "row_id": 0,
+        "task": "task_6",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 90.03,
+        "reason_labels": [
+          "container read I/O load"
+        ]
+      },
+      {
+        "row_id": 1,
+        "task": "task_1",
+        "partial": 1.0,
+        "strict": 1,
+        "seconds": 90.01,
+        "reason_labels": []
+      }
+    ],
+    "implementation_hash": "a2e69d6ecabca792268f7580c2bf6bf7ae0e2a6e8b0cf627cdd587964f5efd51",
+    "case_seconds_ceiling": 90.0,
+    "resources": {
+      "cases": 2,
+      "wall_seconds": 180.09960091600078,
+      "peak_process_rss_bytes": 490340352
+    },
+    "by_task": {
+      "task_1": {
+        "cases": 1,
+        "strict": 1.0
+      },
+      "task_6": {
+        "cases": 1,
+        "strict": 0.0
+      }
+    }
+  },
+  {
+    "status": "complete",
+    "dollars_per_case": 0.14982589999999998,
+    "seconds_per_case": 90.0692679165004,
+    "completed_investigations": 0,
+    "provisional_cases": 0,
+    "fallback_cases": 2,
+    "failure_categories": {
+      "Investigation stopped: ChatClientException. Used the best validated results available.": 1,
+      "Investigation incomplete: no accepted investigator diagnosis with current-KB Prolog support.": 2,
+      "Failure 1: numerical fallback used because a valid evidence-linked model answer was unavailable.": 2,
+      "Investigation stopped: TimeoutError. Used the best validated results available.": 1
+    },
+    "configuration": "fixed",
+    "repeat": 1,
+    "split": "development",
+    "returncode": 0,
+    "cases": 2,
+    "expected_cases": 2,
+    "wall_seconds": 180.139,
+    "dollars": 0.29965179999999997,
+    "model_calls": 14,
+    "prolog_queries": 0,
+    "prolog_successes": 0,
+    "strict": 0.5,
+    "partial": 0.5,
+    "details": [
+      {
+        "row_id": 0,
+        "task": "task_6",
+        "partial": 0.0,
+        "strict": 0,
+        "seconds": 89.72,
+        "reason_labels": [
+          "container read I/O load"
+        ]
+      },
+      {
+        "row_id": 1,
+        "task": "task_1",
+        "partial": 1.0,
+        "strict": 1,
+        "seconds": 90.02,
+        "reason_labels": []
+      }
+    ],
+    "implementation_hash": "a2e69d6ecabca792268f7580c2bf6bf7ae0e2a6e8b0cf627cdd587964f5efd51",
+    "case_seconds_ceiling": 90.0,
+    "resources": {
+      "cases": 2,
+      "wall_seconds": 179.807569624998,
+      "peak_process_rss_bytes": 802390016
+    },
+    "by_task": {
+      "task_1": {
+        "cases": 1,
+        "strict": 1.0
+      },
+      "task_6": {
+        "cases": 1,
+        "strict": 0.0
+      }
+    }
+  }
+]

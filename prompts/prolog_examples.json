@@ -1,0 +1,49 @@
+{
+  "facts": "hosted_on('shop-0','node-1').\nobservation(ev_memory,'shop-0',memory,increase,8.0,1000,2000,memory_mb).\nobservation(ev_node,'node-1',memory,increase,0.0,1000,2000,memory_mb).\nnormal('node-1',memory,ev_node).",
+  "examples": [
+    {
+      "question": "Which pod has memory change evidence alongside a measured normal host metric?",
+      "query": "pod_local_support(P,memory,Es).",
+      "rules": [],
+      "expected": [{"P":"'shop-0'","Es":"[ev_memory,ev_node]"}],
+      "interpretation": "Supports pod-local memory change relative to this host metric. Does not establish that the entire host is healthy or that memory is the root cause."
+    },
+    {
+      "question": "Count changed memory metrics for each candidate and retain their evidence IDs.",
+      "query": "candidate(P,memory,E), aggregate_all(count,candidate(P,memory,_),N).",
+      "rules": [],
+      "expected": [{"P":"'shop-0'","E":"ev_memory","N":"1"}],
+      "interpretation": "One supporting metric; count is corroboration, not independent causal proof."
+    },
+    {
+      "question": "Find changed memory observations whose onset uncertainty is at most 1000 milliseconds.",
+      "query": "candidate(P,memory,E), observation(E,P,memory,_,_,Start,End,_), Width is End-Start, Width =< 1000.",
+      "rules": [],
+      "expected": [{"P":"'shop-0'","E":"ev_memory","Start":"1000","End":"2000","Width":"1000"}],
+      "interpretation": "Ground arithmetic inputs through observations first. The interval constrains measured onset, not the exact failure injection time."
+    },
+    {
+      "question": "Is there evidence of a CPU change?",
+      "query": "candidate(P,cpu,E).",
+      "rules": [],
+      "expected": [],
+      "interpretation": "No supporting bindings. CPU is unresolved, not proven healthy. This result alone cannot complete a positive CPU diagnosis."
+    },
+    {
+      "question": "Repair observation/7 without altering the hypothesis or facts.",
+      "failed_query": "observation(E,P,memory,D,S,Start,End).",
+      "diagnostic": "wrong_arity(observation,7,8): add OriginalSignal as the eighth argument",
+      "query": "candidate(P,memory,E), observation(E,P,memory,D,S,Start,End,Signal).",
+      "rules": [],
+      "expected": [{"P":"'shop-0'","E":"ev_memory","D":"increase","S":"8.0","Start":"1000","End":"2000","Signal":"memory_mb"}],
+      "interpretation": "Minimal repair: preserve all seven positions and add the missing final argument."
+    },
+    {
+      "question": "Express a proposed rule for a precisely timed local memory change.",
+      "query": "h_local_memory(P,E,HostEvidence).",
+      "rules": ["h_local_memory(P,E,HostEvidence) :- pod_local_support(P,memory,[E,HostEvidence]), observation(E,P,memory,_,_,Start,End,_), Width is End-Start, Width =< 1000."],
+      "expected": [{"P":"'shop-0'","E":"ev_memory","HostEvidence":"ev_node"}],
+      "interpretation": "This rule defines a diagnostic pattern. It supports a hypothesis conditional on the measured host metric and interval; it does not prove causation."
+    }
+  ]
+}

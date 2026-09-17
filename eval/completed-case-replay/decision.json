@@ -1,0 +1,67 @@
+{
+  "answers": [
+    {
+      "component": "shippingservice-1",
+      "reason": "container memory load",
+      "onset": 1647738480000,
+      "evidence_ids": [
+        "ev_59fd8948f4fc12b4da6c"
+      ],
+      "confidence": "high",
+      "prolog_support": [
+        {
+          "execution_id": "957b1b7bb7e34e3ba232acf60649c5e5",
+          "binding_indices": [
+            0
+          ],
+          "explanation": "Binding 0 shows pod_local_support('shippingservice-1', memory, [ev_59fd8948f4fc12b4da6c, ev_06eabad8d7ff85b10639]) with observation ev_59fd8948f4fc12b4da6c being a memory-family candidate (score 51694.5, direction increase, signal container_memory_failures.container.pgfault) and ev_06eabad8d7ff85b10639 being a normal node-6 memory metric (system.mem.total). This confirms a pod-local memory anomaly on shippingservice-1 while the host node-6 shows no memory pressure, supporting the container memory load diagnosis. The onset window is [1647738480000, 1647738540000] (60 seconds wide), indicating a precisely timed memory pressure event.",
+          "assumptions": [
+            "The pod_local_support pattern confirms the anomaly is local to the container rather than a host-level memory issue, but does not prove the injected mechanism.",
+            "The onset start 1647738480000 is used as the diagnosis onset; the actual injection time may fall anywhere within the [1647738480000, 1647738540000] measurement window.",
+            "The container_memory_failures.container.pgfault signal increasing to a score of 51694.5 indicates significant page fault activity consistent with memory pressure, but page faults could also be triggered by other mechanisms.",
+            "Co-occurring anomalies in other families (read_io, cpu, write_io) at the same onset window are not independently diagnosed here; they may be secondary effects of the memory load."
+          ]
+        }
+      ],
+      "datetime": "2022-03-20 09:08:00"
+    }
+  ],
+  "model_proposal": {
+    "answers": [
+      {
+        "component": "shippingservice-1",
+        "reason": "container memory load",
+        "onset": 1647738480000,
+        "evidence_ids": [
+          "ev_59fd8948f4fc12b4da6c"
+        ],
+        "confidence": "high",
+        "prolog_support": [
+          {
+            "execution_id": "957b1b7bb7e34e3ba232acf60649c5e5",
+            "binding_indices": [
+              0
+            ],
+            "explanation": "Binding 0 shows pod_local_support('shippingservice-1', memory, [ev_59fd8948f4fc12b4da6c, ev_06eabad8d7ff85b10639]) with observation ev_59fd8948f4fc12b4da6c being a memory-family candidate (score 51694.5, direction increase, signal container_memory_failures.container.pgfault) and ev_06eabad8d7ff85b10639 being a normal node-6 memory metric (system.mem.total). This confirms a pod-local memory anomaly on shippingservice-1 while the host node-6 shows no memory pressure, supporting the container memory load diagnosis. The onset window is [1647738480000, 1647738540000] (60 seconds wide), indicating a precisely timed memory pressure event.",
+            "assumptions": [
+              "The pod_local_support pattern confirms the anomaly is local to the container rather than a host-level memory issue, but does not prove the injected mechanism.",
+              "The onset start 1647738480000 is used as the diagnosis onset; the actual injection time may fall anywhere within the [1647738480000, 1647738540000] measurement window.",
+              "The container_memory_failures.container.pgfault signal increasing to a score of 51694.5 indicates significant page fault activity consistent with memory pressure, but page faults could also be triggered by other mechanisms.",
+              "Co-occurring anomalies in other families (read_io, cpu, write_io) at the same onset window are not independently diagnosed here; they may be secondary effects of the memory load."
+            ]
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "The onset window [1647738480000, 1647738540000] starts 30 seconds before the originally requested window [1647738510000, 1647739800000]; the evidence overlaps but is not fully contained within the requested window.",
+      "Co-occurring anomalies in read_io (ev_e705d1ef6494aac0c51c, score 48608.0), cpu (ev_ed3dc91f6e7e67151073, ev_49478c4cdb34a28a9828), and write_io (ev_442f189608677aac11e6) families share the same onset window and may be secondary effects or independent issues not diagnosed here.",
+      "The diagnosis is based on measured telemetry patterns (candidate + pod_local_support); it supports but does not prove the specific injected fault mechanism.",
+      "No trace or log evidence was inspected for shippingservice-1; additional corroboration from application-level signals is unavailable."
+    ],
+    "investigation_status": "complete",
+    "kb_version": "00f5dbc58874f13dfb09"
+  },
+  "notes": [],
+  "investigation_status": "complete"
+}

@@ -1,0 +1,15 @@
+{
+  "docker_image": "magentic-rca-fork",
+  "build": "passed",
+  "offline_cases": 2,
+  "exit_code": 0,
+  "constraints": {
+    "cpus": 2,
+    "memory": "8g",
+    "network": "none",
+    "root_filesystem": "read-only"
+  },
+  "image_exclusions": "passed: .git, reference track folders, data, out, .env",
+  "runtime_fingerprint": "a2e69d6ecabca792268f7580c2bf6bf7ae0e2a6e8b0cf627cdd587964f5efd51",
+  "meaning": "Packaging and offline processing check; not live model accuracy."
+}

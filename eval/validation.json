@@ -1,0 +1,91 @@
+{
+  "tests_passed": 19,
+  "full_offline": {
+    "cases": 70,
+    "wall_seconds": 57.18436429199937,
+    "peak_process_rss_bytes": 1280262144
+  },
+  "linux_20_offline": {
+    "cases": 20,
+    "wall_seconds": 31.12289547299997,
+    "peak_process_rss_bytes": 494227456,
+    "peak_container_memory_bytes": 752447488
+  },
+  "linux_final_readonly": {
+    "cases": 2,
+    "wall_seconds": 3.7331192930000725,
+    "peak_process_rss_bytes": 522960896,
+    "peak_container_memory_bytes": 774041600
+  },
+  "metric_source_replay": {
+    "checked": 12,
+    "passed": 12,
+    "details": [
+      {
+        "evidence": "ev_00000bbcaa1b1e8b9aed",
+        "valid": true,
+        "source": "metric_node"
+      },
+      {
+        "evidence": "ev_00003439514ce5fceebc",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_000071b29a3d2c4bf622",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_0000760bcd7aa22e11b3",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_0001844b660f63d342dd",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_000187b4b415150e1541",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_000195cb21fd68bc2f56",
+        "valid": true,
+        "source": "metric_node"
+      },
+      {
+        "evidence": "ev_0002be51528a804a09a1",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_0002d28ef062ed61fd1d",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_00031c02a11b0db10592",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_00043b998e9fb209e2ae",
+        "valid": true,
+        "source": "metric_container"
+      },
+      {
+        "evidence": "ev_000473a8c51fe2e3c187",
+        "valid": true,
+        "source": "metric_container"
+      }
+    ],
+    "scope": "Sampled untransformed metric summaries replayed directly from original CSVs; not a causal validation."
+  },
+  "linux_generated_prolog": {
+    "status": "ok",
+    "bindings": 41
+  }
+}

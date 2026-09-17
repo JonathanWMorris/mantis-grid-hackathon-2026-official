@@ -1,0 +1,11 @@
+{
+  "status": "interrupted",
+  "planned_cases": 70,
+  "saved_predictions": 47,
+  "saved_decisions": 47,
+  "investigation_status_counts": {
+    "incomplete": 47
+  },
+  "prolog_execution_results": 0,
+  "note": "18-minute target shared across 70 cases; about 15 seconds per case. Log ends with make terminated. No full-catalog accuracy claim."
+}

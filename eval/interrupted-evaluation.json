@@ -1,0 +1,11 @@
+{
+  "status": "Stopped at participant request during fixed-model comparison",
+  "completed_configuration": "routed: 4 cases",
+  "fixed_completed_cases": 3,
+  "remaining_configurations": "Incomplete fixed; offline/baseline not run",
+  "recorded_development_spend": {
+    "spent": 1.1646792649999997,
+    "calls": 180
+  },
+  "billing_note": "Active interrupted request may incur additional provider charges."
+}
