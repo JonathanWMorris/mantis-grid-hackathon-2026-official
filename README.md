@@ -6,6 +6,8 @@ The implementation is a research prototype. In the latest comparison with a five
 
 A [saved completed investigation](eval/completed-case-replay/) includes the diagnosis, evidence, and exact supporting Prolog snapshot. Its component was correct but its failure reason was wrong: successful logic execution does not guarantee a correct causal explanation.
 
+[Download the two-slide presentation](Magentic-RCA.pptx) for the high-level architecture and measured results.
+
 ## Pipeline
 
 1. **Represent telemetry.** DuckDB and Parquet support bounded data access. Metric changes, trace relationships, and Drain3 log templates become incident-local observations with source references.
